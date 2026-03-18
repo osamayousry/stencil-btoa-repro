@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": [
+    "stencil-component",
+    "nextjs-app"
+  ],
+  "scripts": {
+    "setup": "npm install && npm run build -w stencil-component",
+    "dev": "npm run dev -w nextjs-app"
+  }
+}

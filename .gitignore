@@ -1,0 +1,7 @@
+node_modules
+.next
+stencil-component/www
+stencil-component/dist
+stencil-component/hydrate
+stencil-component/loader
+stencil-component/components

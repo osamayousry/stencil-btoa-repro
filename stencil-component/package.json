@@ -1,0 +1,61 @@
+{
+  "name": "stencil-component",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/stencil-component/stencil-component.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/stencil-component/stencil-component.esm.js",
+      "require": "./dist/stencil-component/stencil-component.cjs.js"
+    },
+    "./components/*": {
+      "import": "./components/*",
+      "types": "./components/*.d.ts"
+    },
+    "./loader": {
+      "import": "./loader/index.js",
+      "require": "./loader/index.cjs",
+      "types": "./loader/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/components.server.js"
+    },
+    "./react/client": {
+      "import": "./dist/react/components.js"
+    },
+    "./hydrate": {
+      "import": "./hydrate/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stenciljs/component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/",
+    "hydrate/",
+    "components/"
+  ],
+  "scripts": {
+    "build": "stencil build && tsc -p tsconfig.react.json",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^4.27.1",
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/react-output-target": "^1.4.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "setupTasks": [
+    {
+      "command": "npm install && npm run build -w stencil-component",
+      "name": "Setup"
+    }
+  ],
+  "tasks": {
+    "dev": {
+      "name": "Dev Server",
+      "command": "npm run dev -w nextjs-app",
+      "runAtStart": true
+    }
+  }
+}
